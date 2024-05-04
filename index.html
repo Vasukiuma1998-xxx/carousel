@@ -1,0 +1,99 @@
+<html>
+<head>
+<style>
+body{
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.slider{
+width:800px;
+height:500px;
+background-color:yellow;
+border-radius:10px;
+overflow:hidden;
+}
+.slides{
+width:500%;
+height:500px;
+background-color:red;
+display:flex;
+}
+.slides img{
+width:800px;
+height:500px;
+}
+.image{
+width:20%;
+transition:2s;
+}
+.slides input{
+display:none;
+}
+
+.manual{
+position:absolute;
+width:800px;
+margin-top:-40px;
+display:flex;
+justify-content:center;
+
+}
+.manuals{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manuals:not(:last-child){
+    margin-right: 30px;
+}
+.manuals:hover{
+    background-color: red;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+</style>
+
+</head>
+<body>
+<div class="slider">
+
+<div class="slides">
+
+<input type="radio" id="radio1" name="radios">
+<input type="radio" id="radio2" name="radios">
+<input type="radio" id="radio3" name="radios">
+
+<div class="image first"><img src="img1.jpg"></div>
+<div class="image"><img src="img2.jpg"></div>
+<div class="image"><img src="img3.jpg"></div>
+
+</div>
+
+<div class="manual">
+<label for="radio1" class="manuals"></label>
+<label for="radio2" class="manuals"></label>
+<label for="radio3" class="manuals"></label>
+</div>
+
+</div>
+
+
+
+
+</body>
+
+
+</html>
